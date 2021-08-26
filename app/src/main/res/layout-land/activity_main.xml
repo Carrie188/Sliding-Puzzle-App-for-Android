@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/moves_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Moves so far: "
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="40dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/pt_line1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/image_00"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="clickImage"
+                android:src="@drawable/img1" />
+
+            <ImageButton
+                android:id="@+id/image_01"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="clickImage"
+                android:src="@drawable/img2" />
+
+            <ImageButton
+                android:id="@+id/image_02"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="clickImage"
+                android:src="@drawable/img3" />
+
+            <ImageButton
+                android:id="@+id/image_03"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="clickImage"
+                android:src="@drawable/img4" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/pt_line2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/image_10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="clickImage"
+                android:src="@drawable/img5" />
+
+            <ImageButton
+                android:id="@+id/image_11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="clickImage"
+                android:src="@drawable/img6" />
+
+            <ImageButton
+                android:id="@+id/image_12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="clickImage"
+                android:src="@drawable/img7" />
+
+            <ImageButton
+                android:id="@+id/image_13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="clickImage"
+                android:src="@drawable/img8" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/pt_line3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/image_20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="clickImage"
+                android:src="@drawable/img9" />
+
+            <ImageButton
+                android:id="@+id/image_21"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="clickImage"
+                android:src="@drawable/img10" />
+
+            <ImageButton
+                android:id="@+id/image_22"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="clickImage"
+                android:src="@drawable/img11" />
+
+            <ImageButton
+                android:id="@+id/image_23"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="clickImage"
+                android:src="@drawable/img12" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/pt_line4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/image_30"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="clickImage"
+                android:src="@drawable/img13" />
+
+            <ImageButton
+                android:id="@+id/image_31"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="clickImage"
+                android:src="@drawable/img14" />
+
+            <ImageButton
+                android:id="@+id/image_32"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="clickImage"
+                android:src="@drawable/img15" />
+
+            <ImageButton
+                android:id="@+id/image_33"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="clickImage"
+                android:src="@drawable/img16"
+                android:visibility="invisible" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/restart_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_weight="1"
+        android:onClick="restartGame"
+        android:text="New Puzzle"
+        app:layout_constraintEnd_toEndOf="@+id/solve_button"
+        app:layout_constraintStart_toStartOf="@+id/solve_button"
+        app:layout_constraintTop_toBottomOf="@+id/solve_button" />
+
+    <Button
+        android:id="@+id/solve_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_weight="1"
+        android:onClick="solvePuzzle"
+        android:text="Solve Puzzle"
+        app:layout_constraintStart_toEndOf="@+id/linearLayout"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/result_display"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/restart_button"
+        app:layout_constraintTop_toBottomOf="@+id/restart_button" />
+
+    <ImageButton
+        android:id="@+id/sliding_puzzle_imag"
+        android:layout_width="238dp"
+        android:layout_height="186dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/slidingpuzzle"
+        android:visibility="invisible"
+        app:layout_constraintStart_toEndOf="@+id/linearLayout"
+        app:layout_constraintTop_toBottomOf="@+id/restart_button" />
+</androidx.constraintlayout.widget.ConstraintLayout>
